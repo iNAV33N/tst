@@ -17,12 +17,17 @@ const precacheResources = [
   'https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js'
 ];
 
+const precacheResources2 = [
+  '/',
+  'index.html'
+];
+
 self.addEventListener('install', event => {
   console.log('Service worker install event!');
   event.waitUntil(
     caches.open(cacheName)
       .then(cache => {
-        return cache.addAll(precacheResources);
+        return cache.addAll(precacheResources2);
       })
   );
 });
