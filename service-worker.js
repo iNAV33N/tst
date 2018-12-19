@@ -1,4 +1,4 @@
-const cacheName = 'v1';
+//const cacheName = 'v1';
 const precacheResources = [
   '/',
   '/index.html',
@@ -20,7 +20,7 @@ const precacheResources = [
 self.addEventListener('install', event => {
   console.log('Service worker install event!');
   event.waitUntil(
-    caches.open(cacheName)
+    caches.open(1)
       .then(cache => {
         return cache.addAll(precacheResources);
       })
