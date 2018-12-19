@@ -18,8 +18,6 @@ const precacheResources = [
 ];
 
 const precacheResources2 = [
-  '/',
-  'index.html'
 ];
 
 self.addEventListener('install', event => {
